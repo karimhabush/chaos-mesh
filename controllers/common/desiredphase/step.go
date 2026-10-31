@@ -29,7 +29,7 @@ func Step(ctx *pipeline.Context) reconcile.Reconciler {
 	}
 	name := ctx.Object.Name + "-desiredphase"
 
-	setupLog.Info("setting up controller", "name", name)
+	setupLog.Info("setting up pipeline step", "name", name)
 
 	return &Reconciler{
 		Object:   ctx.Object.Object,
